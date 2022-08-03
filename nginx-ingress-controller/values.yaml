@@ -81,7 +81,8 @@ hostAliases: []
 ## @param config Custom configuration options for NGINX
 ## ref: https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/configmap/
 ##
-config: {}
+config:
+  use-proxy-protocol: "true"
 ## @param proxySetHeaders Custom headers before sending traffic to backends
 ## ref: https://github.com/kubernetes/ingress-nginx/tree/master/docs/examples/customization/custom-headers
 ##
