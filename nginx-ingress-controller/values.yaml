@@ -727,7 +727,7 @@ defaultBackend:
   service:
     ## @param defaultBackend.service.type Kubernetes Service type for default backend
     ##
-    type: NodePort
+    type: ClusterIP
     ## @param defaultBackend.service.ports.http Default backend service HTTP port
     ##
     ports:
@@ -757,7 +757,7 @@ defaultBackend:
 service:
   ## @param service.type Kubernetes Service type for Controller
   ##
-  type: LoadBalancer
+  type: NodePort
   ## @param service.ports [object] Service ports
   ##
   ports:
