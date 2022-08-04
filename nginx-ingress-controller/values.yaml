@@ -732,6 +732,7 @@ defaultBackend:
     ##
     ports:
       http: 80
+      https: 443
     ## @param defaultBackend.service.annotations Annotations for the default backend service
     ##
     annotations: {}
