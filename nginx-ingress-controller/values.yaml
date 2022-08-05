@@ -27,7 +27,7 @@ nameOverride: ""
 fullnameOverride: ""
 ## @param namespaceOverride String to fully override common.names.namespace
 ##
-namespaceOverride: "nginx-ingress"
+namespaceOverride: "ingress-nginx"
 ## @param commonLabels Add labels to all the deployed resources
 ##
 commonLabels: {}
