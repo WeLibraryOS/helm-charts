@@ -2,12 +2,10 @@
 
 # The namespace this chart will be installed and restricted to,
 # if not specified the chart will be installed to "default"
-defaultNamespace: nginx-ingress
 
 # Custom helm options
 helm:
   # The release name to use. If empty a generated release name will be used
-  releaseName: nginx-ingress
 
   # Force recreate resource that can not be updated
   force: false
