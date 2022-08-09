@@ -630,12 +630,10 @@ ingress:
   apiVersion: ""
   ## @param ingress.hostname When the ingress is enabled, a host pointing to this will be created
   ##
-  hostname: grafana.le-int-svcs.com
-  ## @param ingress.path Default path for the ingress resource
-  ## The Path to Grafana. You may need to set this to '/*' in order to use this with ALB ingress controllers.
-  ##
-  paths:
-    - "/"
+  hosts:
+    - host: grafana.le-int-svcs.com
+      paths:
+        - "/"
   ## @param ingress.annotations Additional annotations for the Ingress resource. To enable certificate autogeneration, place here your cert-manager annotations.
   ## For a full list of possible ingress annotations, please see
   ## ref: https://github.com/kubernetes/ingress-nginx/blob/master/docs/user-guide/nginx-configuration/annotations.md
