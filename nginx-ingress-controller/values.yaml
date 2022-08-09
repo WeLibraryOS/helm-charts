@@ -82,7 +82,9 @@ hostAliases: []
 ## ref: https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/configmap/
 ##
 config:
-  use-proxy-protocol: "true"
+  use-proxy-protocol: "True"
+  proxy-real-ip-cidr: "192.168.55.42/32"
+  server-tokens: "false"
 ## @param proxySetHeaders Custom headers before sending traffic to backends
 ## ref: https://github.com/kubernetes/ingress-nginx/tree/master/docs/examples/customization/custom-headers
 ##
