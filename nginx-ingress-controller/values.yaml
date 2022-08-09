@@ -780,7 +780,8 @@ service:
   ## This can be used to set the LoadBalancer service type to internal only.
   ## ref: https://kubernetes.io/docs/concepts/services-networking/service/#internal-load-balancer
   ##
-  annotations: {}
+  annotations: 
+    
   ## @param service.labels Labels for controller service
   ##
   labels: {}
@@ -806,7 +807,7 @@ service:
   ## Enable client source IP preservation
   ## Ref: https://kubernetes.io/docs/tutorials/services/source-ip/#source-ip-for-services-with-typeloadbalancer
   ##
-  externalTrafficPolicy: ""
+  externalTrafficPolicy: "Local"
   ## @param service.healthCheckNodePort Set this to the managed health-check port the kube-proxy will expose. If blank, a random port in the `NodePort` range will be assigned
   ##
   healthCheckNodePort: 0
