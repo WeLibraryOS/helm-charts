@@ -811,7 +811,7 @@ service:
   ## Enable client source IP preservation
   ## Ref: https://kubernetes.io/docs/tutorials/services/source-ip/#source-ip-for-services-with-typeloadbalancer
   ##
-  externalTrafficPolicy: "Local"
+  externalTrafficPolicy: "Cluster"
   ## @param service.healthCheckNodePort Set this to the managed health-check port the kube-proxy will expose. If blank, a random port in the `NodePort` range will be assigned
   ##
   healthCheckNodePort: 0
