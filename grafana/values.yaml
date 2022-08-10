@@ -561,7 +561,7 @@ serviceAccount:
 service:
   ## @param service.type Kubernetes Service type
   ##
-  type: LoadBalancer
+  type: NodePort
   ## @param service.clusterIP Grafana service Cluster IP
   ## e.g.:
   ## clusterIP: None
