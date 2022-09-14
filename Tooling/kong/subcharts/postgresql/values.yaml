@@ -25,14 +25,14 @@ global:
     ## @param global.postgresql.auth.secretKeys.replicationPasswordKey Name of key in existing secret to use for PostgreSQL credentials (overrides `auth.secretKeys.replicationPasswordKey`). Only used when `global.postgresql.auth.existingSecret` is set.
     ##
     auth:
-      postgresPassword: ""
+      # postgresPassword: ""
       username: "kong"
-      password: ""
+      # password: ""
       database: "kong"
       existingSecret: "kong-pg"
       secretKeys:
-        adminPasswordKey: "adminpw"
-        userPasswordKey: "kongpw"
+        adminPasswordKey: adminpw
+        userPasswordKey: kongpw
         # replicationPasswordKey: ""
     ## @param global.postgresql.service.ports.postgresql PostgreSQL service port (overrides `service.ports.postgresql`)
     ##
@@ -94,7 +94,7 @@ diagnosticMode:
 image:
   registry: docker.io
   repository: bitnami/postgresql
-  tag: 13.6.0-debian-10-r52
+  tag: 13
   ## Specify a imagePullPolicy
   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
   ## ref: https://kubernetes.io/docs/user-guide/images/#pre-pulling-images
@@ -122,13 +122,13 @@ auth:
   enablePostgresUser: true
   ## @param auth.postgresPassword Password for the "postgres" admin user. Ignored if `auth.existingSecret` with key `postgres-password` is provided
   ##
-  postgresPassword: ""
+  # postgresPassword: ""
   ## @param auth.username Name for a custom user to create
   ##
   username: "kong"
   ## @param auth.password Password for the custom user to create. Ignored if `auth.existingSecret` with key `password` is provided
   ##
-  password: ""
+  # password: ""
   ## @param auth.database Name for a custom database to create
   ##
   database: "kong"
