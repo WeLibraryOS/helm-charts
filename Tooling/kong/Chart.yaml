@@ -11,5 +11,5 @@ maintainers:
 name: kong
 sources:
 - https://github.com/Kong/charts/tree/main/charts/kong
-version: 3.0.0
-appVersion: "3.0"
+version: 2.8.1
+appVersion: "2.8"
