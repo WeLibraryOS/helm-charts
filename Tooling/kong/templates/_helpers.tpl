@@ -92,7 +92,7 @@ metadata:
     {{- end }}
   {{- end }}
 spec:
-{{- if (and (not (eq .ingressVersion "extensions/v1beta1")) .ingress.ingressClassName) }}
+{{- if (and (not (eq .ingressVersion "extensions/v1")) .ingress.ingressClassName) }}
   ingressClassName: {{ .ingress.ingressClassName }}
 {{- end }}
   rules:
@@ -110,7 +110,7 @@ spec:
                 number: {{ $servicePort }}
             {{- end }}
           path: {{ $path }}
-          {{- if (not (eq .ingressVersion "extensions/v1beta1")) }}
+          {{- if (not (eq .ingressVersion "extensions/v1")) }}
           pathType: {{ $pathType }}
           {{- end }}
   {{- if (hasKey .ingress "tls") }}
@@ -1363,6 +1363,6 @@ networking.k8s.io/v1
 {{- else if (.Capabilities.APIVersions.Has "networking.k8s.io/v1beta1/Ingress") -}}
 networking.k8s.io/v1beta1
 {{- else -}}
-extensions/v1beta1
+extensions/v1
 {{- end -}}
 {{- end -}}
