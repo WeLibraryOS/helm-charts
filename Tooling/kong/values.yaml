@@ -86,7 +86,7 @@ env:
   pg_schema: public
   pg_port: 5432
   pg_timeout: 5000
-  pg_host: kong-pg-postgresql
+  pg_host: kong-pg-tooling-kong-subcharts-postgresql
   pg_user: kong
   pg_database: kong
   pg_password:
