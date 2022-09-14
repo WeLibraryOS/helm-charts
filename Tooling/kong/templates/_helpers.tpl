@@ -1363,6 +1363,6 @@ networking.k8s.io/v1
 {{- else if (.Capabilities.APIVersions.Has "networking.k8s.io/v1beta1/Ingress") -}}
 networking.k8s.io/v1beta1
 {{- else -}}
-extensions/v1
+networking.k8s.io/v1
 {{- end -}}
 {{- end -}}
