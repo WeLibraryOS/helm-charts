@@ -13,8 +13,3 @@ sources:
 - https://github.com/Kong/charts/tree/main/charts/kong
 version: 3.0.0
 appVersion: "3.0"
-dependencies:
-- name: postgresql
-  version: 11.1.15
-  repository: https://charts.bitnami.com/bitnami
-  condition: postgresql.enabled
