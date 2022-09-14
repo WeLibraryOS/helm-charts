@@ -80,24 +80,35 @@ deployment:
 # e.g. setting pg_user here will override the value normally set when postgresql.enabled
 # is set below. In general, you should not set values here if they are set elsewhere.
 
+
 env:
-  prefix: /kong_prefix/
-  database: postgres
+  database: "postgres"
+  pg_schema: public
+  pg_port: 5432
+  pg_timeout: 5000
+  pg_host: kong-pg-postgresql
+  pg_user: kong
+  pg_database: kong
+  pg_password:
+    valueFrom:
+      secretKeyRef:
+        key: kongpw
+        name: kong-pg
   # the chart uses the traditional router (for Kong 3.x+) because the ingress
   # controller generates traditional routes. if you do not use the controller,
   # you may set this to "traditional_compatible" or "expression" to use the new
   # DSL-based router
   router_flavor: "traditional"
   nginx_worker_processes: "2"
-  proxy_access_log: /dev/stdout
-  admin_access_log: /dev/stdout
-  admin_gui_access_log: /dev/stdout
-  portal_api_access_log: /dev/stdout
-  proxy_error_log: /dev/stderr
-  admin_error_log: /dev/stderr
-  admin_gui_error_log: /dev/stderr
-  portal_api_error_log: /dev/stderr
   prefix: /kong_prefix/
+  # proxy_access_log: /dev/stdout
+  # admin_access_log: /dev/stdout
+  # admin_gui_access_log: /dev/stdout
+  # portal_api_access_log: /dev/stdout
+  # proxy_error_log: /dev/stderr
+  # admin_error_log: /dev/stderr
+  # admin_gui_error_log: /dev/stderr
+  # portal_api_error_log: /dev/stderr
 
 # This section is any customer specific environments variables that doesn't require KONG_ prefix.
 # These custom environment variables are typicall used in custom plugins or serverless plugins to
@@ -587,10 +598,15 @@ ingressController:
 # https://github.com/Kong/charts/blob/main/charts/kong/FAQs.md#kong-fails-to-start-after-helm-upgrade-when-postgres-is-used-what-do-i-do
 
 postgresql:
-  enabled: true
+  enabled: false
   auth:
     username: kong
     database: kong
+    existingSecret: "kong-pg-creds"
+    # existingSecret: "kong-pg"
+    #   secretKeys:
+    #     adminPasswordKey: "adminpw"
+    #     userPasswordKey: "kongpw"  
   image:
     # use postgres < 14 until is https://github.com/Kong/kong/issues/8533 resolved and released
     # enterprise (kong-gateway) supports postgres 14

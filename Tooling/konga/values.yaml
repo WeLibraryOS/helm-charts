@@ -20,16 +20,18 @@ service:
 # Konga default configuration
 config: 
   port: 1337
-  node_env: development
+  # node_env: development
   db_adapter: postgres
-  db_host: kong-pg-postgresql.kong.svc.cluster.local
+  # db_uri: 
+  db_host: konga-pg-postgresql.kong.svc.cluster.local
   # db_port: 5432
-  db_user: postgres
-  # db_password: <postgres password>
-  db_database: postgres
-  token_secret: okasdf
-  ssl_key_path: sdf
-  ssl_crt_path: sdfsd
+  db_user: konga
+  # db_password: 
+  db_database: konga
+  token_secret: {}
+  # db_uri: "fd"
+  ssl_key_path: {}
+  ssl_crt_path: {}
 
 # LDAP configuration for Konga
 ldap: {}
