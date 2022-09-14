@@ -344,7 +344,8 @@ proxy:
 
   # Optionally specify a static load balancer IP.
   # loadBalancerIP:
-
+postgresql:
+  enabled: false
 # Specify Kong UDP proxy service configuration
 # Currently, LoadBalancer type Services are generally limited to a single transport protocol
 # Multi-protocol Services are an alpha feature as of Kubernetes 1.20:
