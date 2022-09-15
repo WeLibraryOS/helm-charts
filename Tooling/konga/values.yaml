@@ -65,8 +65,7 @@ ingress:
   hosts:
     - host: apis.le-int-svcs.com
       paths:
-      - path: /admin
-        pathType: Prefix
+      - /admin
 
   tls: []
   #  - secretName: chart-example-tls
