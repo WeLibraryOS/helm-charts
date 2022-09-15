@@ -26,7 +26,11 @@ config:
   db_host:  konga-pg-tooling-konga-postgresql.kong.svc.cluster.local
   # db_port: 5432
   db_user: konga
-  # db_password: 
+  db_password:
+    valueFrom:
+      secretKeyRef:
+        key: password
+        name: konga-pg
   db_database: konga
   token_secret: {}
   # db_uri: "fd"
