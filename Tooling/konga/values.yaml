@@ -63,9 +63,10 @@ ingress:
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: konga.le-int-svcs.com
+    - host: apis.le-int-svcs.com
       paths:
-        - /
+      - path: /admin
+        pathType: Prefix
 
   tls: []
   #  - secretName: chart-example-tls
