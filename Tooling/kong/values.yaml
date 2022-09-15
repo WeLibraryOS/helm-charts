@@ -255,13 +255,13 @@ cluster:
     # TLS secret name.
     # tls: kong-cluster.example.com-tls
     # Ingress hostname
-    hostname:
+    hostname: apis.le-int-svcs.com
     # Map of ingress annotations.
     annotations: {}
     # Ingress path.
     path: /
     # Each path in an Ingress is required to have a corresponding path type. (ImplementationSpecific/Exact/Prefix)
-    pathType: ImplementationSpecific
+    pathType: Prefix
 
 # Specify Kong proxy service configuration
 proxy:
