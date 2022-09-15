@@ -23,7 +23,7 @@ config:
   # node_env: development
   db_adapter: postgres
   # db_uri: 
-  db_host: konga-pg-postgresql.kong.svc.cluster.local
+  db_host:  konga-pg-tooling-konga-postgresql.kong.svc.cluster.local
   # db_port: 5432
   db_user: konga
   # db_password: 
