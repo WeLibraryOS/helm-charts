@@ -15,7 +15,6 @@ data:
   # SSL_CRT_PATH: {{ .Values.config.ssl_crt_path }}
   KONGA_HOOK_TIMEOUT: "{{ default 60000 .Values.config.konga_hook_timeout }}"
   DB_ADAPTER: {{ default "postgres" .Values.config.db_adapter }}
-  # DB_URI: {{  (lookup "v1" "Secret" .Release.Namespace "konga-pg").data.uri  }}
   DB_HOST: {{ .Values.config.db_host }}
   DB_PORT: "{{ default 5432 .Values.config.db_port }}"
   DB_USER: {{ default "postgres" .Values.config.db_user }}
