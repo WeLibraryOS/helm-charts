@@ -19,7 +19,7 @@ data:
   DB_PORT: "{{ default 5432 .Values.config.db_port }}"
   DB_USER: {{ default "postgres" .Values.config.db_user }}
   {{ if (lookup "v1" "Secret" .Release.Namespace "konga-pg") }}
-  DB_PASSWORD: {{ (lookup "v1" "Secret" .Release.Namespace "konga-pg").data.password }}
+  DB_PASSWORD: {{ (lookup "v1" "Secret" .Release.Namespace "konga-pg").data.password | b64dec }}
   {{ else }}
   DB_PASSWORD: {{ default "postgres" .Values.config.db_password }}
   {{ end }}
