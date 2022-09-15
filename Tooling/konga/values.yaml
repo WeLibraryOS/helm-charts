@@ -20,7 +20,7 @@ service:
 # Konga default configuration
 config: 
   port: 1337
-  # node_env: development
+  node_env: development
   db_adapter: postgres
   # db_uri: 
   db_host:  konga-pg-tooling-konga-postgresql.kong.svc.cluster.local
