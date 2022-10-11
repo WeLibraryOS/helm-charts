@@ -26,13 +26,13 @@ global:
     ##
     auth:
       # postgresPassword: ""
-      username: "kong"
+      username: "user"
       # password: ""
-      database: "kong"
-      existingSecret: "kong-pg"
+      database: "comms-db"
+      existingSecret: "comms-pg"
       secretKeys:
         adminPasswordKey: adminpw
-        userPasswordKey: kongpw
+        userPasswordKey: userpw
         # replicationPasswordKey: ""
     ## @param global.postgresql.service.ports.postgresql PostgreSQL service port (overrides `service.ports.postgresql`)
     ##
