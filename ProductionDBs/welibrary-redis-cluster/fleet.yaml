@@ -1,0 +1,4 @@
+namespace: welibrary
+name: welibrary-redis
+labels:
+  app: welibrary-redis
