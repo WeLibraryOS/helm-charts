@@ -204,7 +204,7 @@ auth:
 ## @param proxy reverse Proxy mode edge, reencrypt, passthrough or none
 ## ref: https://www.keycloak.org/server/reverseproxy
 ##
-proxy: passthrough
+proxy: edge
 ## @param httpRelativePath Set the path relative to '/' for serving resources. Useful if you are migrating from older version which were using '/auth/'
 ## ref: https://www.keycloak.org/migration/migrating-to-quarkus#_default_context_path_changed
 ##
@@ -874,9 +874,9 @@ keycloakConfigCli:
   podAnnotations: {}
   ## @param keycloakConfigCli.extraEnvVars Additional environment variables to set
   ## Example:
-  ## extraEnvVars:
-  ##   - name: FOO
-  ##     value: "bar"
+  # extraEnvVars:
+  #   - name: FOO
+  #     value: "bar"
   ##
   extraEnvVars: []
   ## @param keycloakConfigCli.extraEnvVarsCM ConfigMap with extra environment variables
