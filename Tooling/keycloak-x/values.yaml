@@ -253,9 +253,9 @@ args: []
 ## Example:
 extraEnvVars:
   - name: "KC_HOSTNAME"
-    value: "https://keycloak.le-int-svcs.com"
+    value: "keycloak.le-int-svcs.com"
   - name: "KC_HOSTNAME_ADMIN"
-    value: "https://keycloak.le-int-svcs.com"
+    value: "keycloak.le-int-svcs.com"
   - name: "KC_PROXY"
     value: "none"
   - name: "REDIRECT_SOCKET"
