@@ -941,13 +941,13 @@ postgresql:
 ## @param externalDatabase.existingSecretPasswordKey Name of an existing secret key containing the database credentials
 ##
 externalDatabase:
-  host: ""
+  host: "keycloak-pg-productiondbs-keycloak-x-postgresql.learningeconomy.svc.cluster.local"
   port: 5432
-  user: bn_keycloak
-  database: bitnami_keycloak
-  password: ""
-  existingSecret: ""
-  existingSecretPasswordKey: ""
+  user: keycloak
+  database: keycloak
+  # password: ""
+  existingSecret: "keycloak-pg"
+  existingSecretPasswordKey: "keycloakpw"
 
 ## @section Keycloak Cache parameters
 
@@ -956,7 +956,7 @@ externalDatabase:
 ## @param cache.enabled Switch to enable or disable the keycloak distributed cache for kubernetes
 ##
 cache:
-  enabled: false
+  enabled: true
 
 ## @section Keycloak Logging parameters
 
