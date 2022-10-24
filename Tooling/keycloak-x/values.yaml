@@ -258,6 +258,8 @@ extraEnvVars:
     value: "keycloak.le-int-svcs.com"  
   - name: KC_PROXY_ADDRESS_FORWARDING
     value: "true"
+  - name: PROXY_ADDRESS_FORWARDING
+    value: "true"
   - name: KC_HOSTNAME_STRICT_HTTPS
     value: "false"
   - name: KC_HOSTNAME_STRICT
