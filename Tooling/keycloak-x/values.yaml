@@ -257,6 +257,8 @@ extraEnvVars:
   - name: "KC_HOSTNAME_ADMIN"
     value: "keycloak.le-int-svcs.com"
   - name: "KC_PROXY"
+  - name: "KC_HOSTNAME_STRICT"
+    value: "false"
     value: "none"
   - name: "REDIRECT_SOCKET"
     value: "proxy-https"
