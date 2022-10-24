@@ -251,11 +251,11 @@ command: []
 args: []
 ## @param extraEnvVars Extra environment variables to be set on Keycloak container
 ## Example:
-## extraEnvVars:
-##   - name: FOO
-##     value: "bar"
+extraEnvVars:
+  - name: KC_HOSTNAME
+    value: "keycloak.le-int-svcs.com"
 ##
-extraEnvVars: []
+# extraEnvVars: []
 ## @param extraEnvVarsCM Name of existing ConfigMap containing extra env vars
 ##
 extraEnvVarsCM: ""
