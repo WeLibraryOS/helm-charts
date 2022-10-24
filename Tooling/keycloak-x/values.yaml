@@ -252,20 +252,10 @@ args: []
 ## @param extraEnvVars Extra environment variables to be set on Keycloak container
 ## Example:
 extraEnvVars:
-  - name: KC_HOSTNAME
-    value: "keycloak.le-int-svcs.com"
-  - name: KC_HOSTNAME_ADMIN
-    value: "keycloak.le-int-svcs.com"  
-  - name: KC_PROXY_ADDRESS_FORWARDING
-    value: "true"
-  - name: PROXY_ADDRESS_FORWARDING
-    value: "true"
-  - name: KC_HOSTNAME_STRICT_HTTPS
-    value: "false"
-  - name: KC_HOSTNAME_STRICT
-    value: "false"
-  - name: KC_HTTP_ENABLED
-    value: "true"
+  - name: "KC_HOSTNAME"
+    value: "https://keycloak.le-int-svcs.com"
+  - name: "KC_HOSTNAME_ADMIN"
+    value: "https://keycloak.le-int-svcs.com"
   - name: "KC_PROXY"
     value: "none"
   - name: "REDIRECT_SOCKET"
@@ -273,7 +263,8 @@ extraEnvVars:
   - name: "KC_FRONTEND_URL"
     value: "https://keycloak.le-int-svcs.com"
   - name: "KC_AUTH_URL"
-    value: "https://keycloak.le-int-svcs.com/auth"
+    value: "https://keycloak.le-int-svcs.com"
+
 ##
 # extraEnvVars: []
 ## @param extraEnvVarsCM Name of existing ConfigMap containing extra env vars
