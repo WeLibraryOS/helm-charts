@@ -274,7 +274,7 @@ replicaCount: 1
 ##
 containerPorts:
   http: 8080
-  https: 8443
+  https: 8080
   management: 9990
 ## Keycloak pods' SecurityContext
 ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-pod
@@ -473,7 +473,7 @@ sidecars: []
 service:
   ## @param service.type Kubernetes service type
   ##
-  type: NodePort
+  type: ClusterIP
   ## @param service.ports.http Keycloak service HTTP port
   ## @param service.ports.https Keycloak service HTTPS port
   ##
