@@ -204,7 +204,7 @@ auth:
 ## @param proxy reverse Proxy mode edge, reencrypt, passthrough or none
 ## ref: https://www.keycloak.org/server/reverseproxy
 ##
-proxy: none
+proxy: passthrough
 ## @param httpRelativePath Set the path relative to '/' for serving resources. Useful if you are migrating from older version which were using '/auth/'
 ## ref: https://www.keycloak.org/migration/migrating-to-quarkus#_default_context_path_changed
 ##
@@ -262,6 +262,14 @@ extraEnvVars:
     value: "false"
   - name: KC_HTTP_ENABLED
     value: "true"
+  - name: "KC_PROXY"
+    value: "passthrough"
+  - name: "REDIRECT_SOCKET"
+    value: "proxy-https"
+  - name: "KC_FRONTEND_URL"
+    value: "https://keycloak.le-int-svcs.com"
+  - name: "KC_AUTH_URL"
+    value: "https://keycloak.le-int-svcs.com/auth"
 ##
 # extraEnvVars: []
 ## @param extraEnvVarsCM Name of existing ConfigMap containing extra env vars
@@ -498,7 +506,7 @@ service:
   ## Values: ClientIP or None
   ## ref: https://kubernetes.io/docs/user-guide/services/
   ##
-  sessionAffinity: edge
+  sessionAffinity: None
   ## @param service.sessionAffinityConfig Additional settings for the sessionAffinity
   ## sessionAffinityConfig:
   ##   clientIP:
