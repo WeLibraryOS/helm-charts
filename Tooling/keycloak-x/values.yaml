@@ -263,7 +263,7 @@ extraEnvVars:
   - name: KC_HTTP_ENABLED
     value: "true"
   - name: "KC_PROXY"
-    value: "passthrough"
+    value: "none"
   - name: "REDIRECT_SOCKET"
     value: "proxy-https"
   - name: "KC_FRONTEND_URL"
