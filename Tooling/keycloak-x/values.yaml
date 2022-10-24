@@ -260,7 +260,6 @@ extraEnvVars:
     value: "true"
   - name: KC_HOSTNAME_STRICT_HTTPS
     value: "false"
-  - name: 
 ##
 # extraEnvVars: []
 ## @param extraEnvVarsCM Name of existing ConfigMap containing extra env vars
