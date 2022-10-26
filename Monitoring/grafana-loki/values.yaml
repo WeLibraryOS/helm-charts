@@ -876,7 +876,7 @@ gateway:
     enabled: true
     ## @param gateway.ingress.pathType Ingress path type
     ##
-    pathType: ImplementationSpecific
+    pathType: Prefix
     ## @param gateway.ingress.apiVersion Force Ingress API version (automatically detected if not set)
     ##
     apiVersion: ""
