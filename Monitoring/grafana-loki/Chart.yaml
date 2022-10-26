@@ -40,7 +40,7 @@ keywords:
 maintainers:
   - name: Bitnami
     url: https://github.com/bitnami/charts
-name: grafana-loki
+name: gl
 sources:
   - https://github.com/bitnami/containers/tree/main/bitnami/grafana-loki
   - https://github.com/grafana/loki/
