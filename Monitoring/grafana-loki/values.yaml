@@ -3708,7 +3708,7 @@ serviceAccount:
 metrics:
   ## @param metrics.enabled Enable metrics
   ##
-  enabled: true
+  enabled: false
   ## Prometheus Operator ServiceMonitor configuration
   ##
   serviceMonitor:
