@@ -1,0 +1,24 @@
+dependencies:
+- name: loki
+  repository: https://grafana.github.io/helm-charts
+  version: 2.16.0
+- name: promtail
+  repository: https://grafana.github.io/helm-charts
+  version: 6.6.1
+- name: fluent-bit
+  repository: https://grafana.github.io/helm-charts
+  version: 2.3.2
+- name: grafana
+  repository: https://grafana.github.io/helm-charts
+  version: 6.43.4
+- name: prometheus
+  repository: https://prometheus-community.github.io/helm-charts
+  version: 15.5.4
+- name: filebeat
+  repository: https://helm.elastic.co
+  version: 7.17.3
+- name: logstash
+  repository: https://helm.elastic.co
+  version: 7.17.3
+digest: sha256:9d6a1e3544b7afa4ede060829b4c16af31e19cb3ea63e2dd3d5bb10262264b38
+generated: "2022-11-07T23:58:15.175796767-06:00"
