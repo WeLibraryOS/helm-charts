@@ -900,7 +900,7 @@ autoscaling:
 metrics:
   ## @param metrics.enabled Enable exposing Controller statistics
   ##
-  enabled: false
+  enabled: true
   ## Prometheus exporter service parameters
   ##
   service:
